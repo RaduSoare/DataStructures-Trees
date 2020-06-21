@@ -1,0 +1,61 @@
+===============================================================================
+Tema2-SD Cautari de produse
+Nume: Soare Radu
+Grupa: 313CD
+===============================================================================
+
+Overview: 
+  Am implementat o interfata de lucru care faciliteaza stocarea unor date
+sub forma unui arbore ce contine elemente unice, duplicatele fiind stocate
+intr-o lista dublu inlantuita.
+
+Functii:
+ 1. createTree
+- initializeaza toate campurile unui arbore gol
+ 2. search
+- parcurge arborele comparand valoarea cautata cu valoarea din subarborii
+nodului x primit ca parametru
+ 3. minimum
+- se parcurge arborele pana la cel mai din stanga nod
+ 4. maximum
+- se parcurge arborele pana la cel mai din dreapta nod
+ 5. successor
+- sunt verificate 2 cazuri: daca nodul are subarbore drept si returneaza 
+minimul din subarborele drept sau in caz contrar se parcurge arborele pe 
+link-uri de parinti pana cand nodul este copilul stang al unui parinte, pe care il returneaza
+ 6. predecessor
+- sunt verificate 2 cazuri: daca nodul are subarbore stang si returneaza 
+maximul din subarborele drept sau in caz contrar se parcurge arborele pe 
+link-uri de parinti pana cand nodul este copilul drept al unui parinte, pe care il returneaza
+ 7. avlRotateLeft
+- roteste arborele la stanga in jurul nodului primit ca parametru
+- actualizeaza inaltimile nodurilor modificate
+ 8. avlRotateRight
+- roteste arborele la dreapta in jurul nodului primit ca parametru
+- actualizeaza inaltimile nodurilor modificate
+ 9. avlGetBalance
+- face diferenta dintre inaltimile copiilor unui nod
+ 10. avlFixUp
+- recalculeaza inaltimile nodurilor
+- trateaza cele 4 cazuri de debalansare RL, RR, LR, LL
+ 11. update_links
+- parcurge tot arborele si reface legaturile nodurilor dupa insert\delete
+ 12. insertList
+- insereaza nodurile duplicate la sfarsitul listei
+ 13. insert
+- cauta in arbore nodul un elementul primit ca parametru si daca acesta 
+nu e gasit, este introdus in arbore, daca e gasit, e introdus in lista de duplicate.
+ 14. delete
+- verifica daca nodul cu elementul primit ca parametru are duplicate.
+Daca are duplicate este sters ultimul nod din lista, altfel e sters nodul
+din arbore
+- se restabileste proprietatea de AVL Tree prin rebalansare
+ 15. remove_and_fix
+- verifica ce fel de copil a fost nodul sters
+- verifica ce fel de debalansare exista pentru a apela functia de fixUp
+pentru nodurile corecte
+ 16. destroyTree
+- parcurge lista de noduri si dezaloca fiecare nod
+
+
+
